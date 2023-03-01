@@ -1,0 +1,60 @@
+﻿<Window x:Class="SysHW3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SysHW3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="263" Width="587">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <ProgressBar Name="Progressbar" Height="20" VerticalAlignment="Top" Width="300"></ProgressBar>
+        </Grid>
+        <Grid Grid.Row="0" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1.3*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1" Grid.Column="2">
+                <TextBox Name="FilePathtxtbox" Height="20"/>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Button Name="FileOpenBtn" Content="File" Width="100" VerticalAlignment="Center"  Click="FileOpenBtn_Click"/>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="0">
+                <TextBlock Text="Password" Margin="15 0 0 0"/>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="2">
+                <PasswordBox Name="Passwordtxtbox" Height="20"/>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="4">
+                <RadioButton Name="Encryptrbtn" Content="Encrypt" IsChecked="True" />
+                <RadioButton Name="Decryptrbtn" Content="Decrypt" IsChecked="False"  HorizontalAlignment="Right" />
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Name="StartBtn" Content="Start" FontFamily="Arial" Width="80" Height="25" Click="EncryptDecryptBtn_Click"/>
+            <Button Name="CancelBtn" Grid.Column="2" FontFamily="Arial" Content="Cancel" Width="80" Height="25" Click="Cancel_Click"/>
+        </Grid>
+    </Grid>
+</Window>
